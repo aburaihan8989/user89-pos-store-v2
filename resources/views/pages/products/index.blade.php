@@ -90,12 +90,12 @@
                                                 </td>
                                                 <td>
                                                     {{-- {{ $product->category }} --}}
-                                                    @if ($product->category == 'produk1')
-                                                        Produk 1
-                                                    @elseif ($product->category == 'produk2')
-                                                        Produk 2
-                                                    @elseif ($product->category == 'produk3')
-                                                        Produk 3
+                                                    @if ($product->category == 'service')
+                                                        Service
+                                                    @elseif ($product->category == 'sparepart')
+                                                        Sparepart
+                                                    @elseif ($product->category == 'other')
+                                                        Other
                                                     @endif
                                                 </td>
                                                 <td>
@@ -115,7 +115,7 @@
                                                         <span class="badge badge-danger">Habis</span>
                                                     @elseif ($product->stock > 0 & $product->stock < $product->std_stock)
                                                         <span class="badge badge-warning">Kurang</span>
-                                                    @elseif ($product->stock > $product->std_stock)
+                                                    @elseif ($product->stock >= $product->std_stock)
                                                         <span class="badge badge-success">Banyak</span>
                                                     @else
                                                     @endif
@@ -135,7 +135,7 @@
                                                     <div class="d-flex">
                                                         @if ( auth()->user()->roles == "admin" )
                                                             <a href='{{ route('product.edit', $product->id) }}'
-                                                                class="btn btn-sm btn-info btn-icon">
+                                                                class="btn btn-sm btn-primary btn-icon">
                                                                 <i class="fas fa-edit"></i>
                                                                 Edit
                                                             </a>
@@ -147,16 +147,23 @@
                                                             </a>
                                                         @endif
 
-                                                        <form action="#">
-                                                        {{-- <form action="{{ route('product.destroy', $product->id) }}"
-                                                            method="POST" class="ml-2"> --}}
-                                                            {{-- <input type="hidden" name="_method" value="DELETE" />
-                                                            <input type="hidden" name="_token"
-                                                                value="{{ csrf_token() }}" /> --}}
-                                                            <button class="btn btn-sm btn-secondary btn-icon confirm-delete ml-2">
-                                                                <i class="fas fa-times"></i> Delete
-                                                            </button>
-                                                        </form>
+                                                        @if ( auth()->user()->roles == "admin" )
+                                                            <form action="{{ route('product.destroy', $product->id) }}"
+                                                                method="POST" class="ml-2">
+                                                                <input type="hidden" name="_method" value="DELETE" />
+                                                                <input type="hidden" name="_token"
+                                                                    value="{{ csrf_token() }}" />
+                                                                    <button class="btn btn-sm btn-danger btn-icon confirm-delete ml-2">
+                                                                    <i class="fas fa-times"></i> Delete
+                                                                </button>
+                                                            </form>
+                                                        @else
+                                                            <a href='#'
+                                                                class="btn btn-sm btn-secondary btn-icon ml-2">
+                                                                <i class="fas fa-times"></i>
+                                                                Delete
+                                                            </a>
+                                                        @endif
                                                     </div>
                                                 </td>
                                             </tr>
