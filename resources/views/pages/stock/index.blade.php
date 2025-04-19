@@ -90,12 +90,12 @@
 
                                                 <td>
                                                     {{-- {{ $product->category }} --}}
-                                                    @if ($data->category == 'service')
-                                                        Service
-                                                    @elseif ($data->category == 'sparepart')
-                                                        Sparepart
-                                                    @elseif ($data->category == 'other')
-                                                        Other
+                                                    @if ($data->category == 'toko')
+                                                        Toko
+                                                    @elseif ($data->category == 'produk')
+                                                        Produk
+                                                    @elseif ($data->category == 'layanan')
+                                                        Layanan
                                                     @endif
                                                 </td>
                                                 <td>

@@ -103,17 +103,17 @@
                                 <label class="form-label">Category</label>
                                 <div class="selectgroup w-100">
                                     <label class="selectgroup-item">
-                                        <input type="radio" name="category" value="service" class="selectgroup-input"
+                                        <input type="radio" name="category" value="toko" class="selectgroup-input"
                                             checked="">
-                                        <span class="selectgroup-button">Service</span>
+                                        <span class="selectgroup-button">Toko</span>
                                     </label>
                                     <label class="selectgroup-item">
-                                        <input type="radio" name="category" value="sparepart" class="selectgroup-input">
-                                        <span class="selectgroup-button">Sparepart</span>
+                                        <input type="radio" name="category" value="produk" class="selectgroup-input">
+                                        <span class="selectgroup-button">Produk</span>
                                     </label>
                                     <label class="selectgroup-item">
-                                        <input type="radio" name="category" value="other" class="selectgroup-input">
-                                        <span class="selectgroup-button">Other</span>
+                                        <input type="radio" name="category" value="layanan" class="selectgroup-input">
+                                        <span class="selectgroup-button">Layanan</span>
                                     </label>
                                 </div>
                             </div>
