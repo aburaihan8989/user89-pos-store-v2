@@ -112,8 +112,8 @@
                                         <span class="selectgroup-button">Produk</span>
                                     </label>
                                     <label class="selectgroup-item">
-                                        <input type="radio" name="category" value="layanan" class="selectgroup-input">
-                                        <span class="selectgroup-button">Layanan</span>
+                                        <input type="radio" name="category" value="retail" class="selectgroup-input">
+                                        <span class="selectgroup-button">Retail</span>
                                     </label>
                                 </div>
                             </div>

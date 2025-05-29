@@ -94,8 +94,8 @@
                                                         Toko
                                                     @elseif ($product->category == 'produk')
                                                         Produk
-                                                    @elseif ($product->category == 'layanan')
-                                                        Layanan
+                                                    @elseif ($product->category == 'retail')
+                                                        Retail
                                                     @endif
                                                 </td>
                                                 <td>
